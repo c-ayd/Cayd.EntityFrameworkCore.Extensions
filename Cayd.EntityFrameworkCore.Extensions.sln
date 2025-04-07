@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E06AD187-17AF-43CE-81A3-6D73B96D3682}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0CBC7206-0C75-4B01-9FC4-C1AA6DEA4DA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9B90291F-DE00-4EB0-9728-D10A79E5092F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cayd.EntityFrameworkCore.Extensions", "src\Cayd.EntityFrameworkCore.Extensions\Cayd.EntityFrameworkCore.Extensions.csproj", "{DDA00981-DBAD-4D27-914C-3010CCAB096C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDA00981-DBAD-4D27-914C-3010CCAB096C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA00981-DBAD-4D27-914C-3010CCAB096C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA00981-DBAD-4D27-914C-3010CCAB096C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA00981-DBAD-4D27-914C-3010CCAB096C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DDA00981-DBAD-4D27-914C-3010CCAB096C} = {0CBC7206-0C75-4B01-9FC4-C1AA6DEA4DA2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1CF42BF-C5A0-4BD6-BBCD-77DD989F9CD1}
+	EndGlobalSection
+EndGlobal
