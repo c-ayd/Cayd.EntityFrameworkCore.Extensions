@@ -14,7 +14,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0CBC7206-0C7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9B90291F-DE00-4EB0-9728-D10A79E5092F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cayd.EntityFrameworkCore.Extensions", "src\Cayd.EntityFrameworkCore.Extensions\Cayd.EntityFrameworkCore.Extensions.csproj", "{DDA00981-DBAD-4D27-914C-3010CCAB096C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cayd.EntityFrameworkCore.Extensions", "src\Cayd.EntityFrameworkCore.Extensions\Cayd.EntityFrameworkCore.Extensions.csproj", "{DDA00981-DBAD-4D27-914C-3010CCAB096C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{17B12A05-DACA-4DEE-9A2D-3206F6D0E548}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cayd.EntityFrameworkCore.Extensions.Test.Utility", "test\Cayd.EntityFrameworkCore.Extensions.Test.Utility\Cayd.EntityFrameworkCore.Extensions.Test.Utility.csproj", "{EEF869ED-5389-4CD3-B2BE-1FCF4C74868F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cayd.EntityFrameworkCore.Extensions.Test.Api", "test\IntegrationTests\Cayd.EntityFrameworkCore.Extensions.Test.Api\Cayd.EntityFrameworkCore.Extensions.Test.Api.csproj", "{48F44A15-5532-4944-87F6-7A53E960C5EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cayd.EntityFrameworkCore.Extensions.Test.Integration", "test\IntegrationTests\Cayd.EntityFrameworkCore.Extensions.Test.Integration\Cayd.EntityFrameworkCore.Extensions.Test.Integration.csproj", "{42C726D7-2FC9-4177-BDFD-D88E5F3F2CC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,12 +34,28 @@ Global
 		{DDA00981-DBAD-4D27-914C-3010CCAB096C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDA00981-DBAD-4D27-914C-3010CCAB096C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDA00981-DBAD-4D27-914C-3010CCAB096C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEF869ED-5389-4CD3-B2BE-1FCF4C74868F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF869ED-5389-4CD3-B2BE-1FCF4C74868F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF869ED-5389-4CD3-B2BE-1FCF4C74868F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF869ED-5389-4CD3-B2BE-1FCF4C74868F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48F44A15-5532-4944-87F6-7A53E960C5EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48F44A15-5532-4944-87F6-7A53E960C5EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48F44A15-5532-4944-87F6-7A53E960C5EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48F44A15-5532-4944-87F6-7A53E960C5EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42C726D7-2FC9-4177-BDFD-D88E5F3F2CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42C726D7-2FC9-4177-BDFD-D88E5F3F2CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42C726D7-2FC9-4177-BDFD-D88E5F3F2CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42C726D7-2FC9-4177-BDFD-D88E5F3F2CC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DDA00981-DBAD-4D27-914C-3010CCAB096C} = {0CBC7206-0C75-4B01-9FC4-C1AA6DEA4DA2}
+		{17B12A05-DACA-4DEE-9A2D-3206F6D0E548} = {9B90291F-DE00-4EB0-9728-D10A79E5092F}
+		{EEF869ED-5389-4CD3-B2BE-1FCF4C74868F} = {9B90291F-DE00-4EB0-9728-D10A79E5092F}
+		{48F44A15-5532-4944-87F6-7A53E960C5EF} = {17B12A05-DACA-4DEE-9A2D-3206F6D0E548}
+		{42C726D7-2FC9-4177-BDFD-D88E5F3F2CC8} = {17B12A05-DACA-4DEE-9A2D-3206F6D0E548}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1CF42BF-C5A0-4BD6-BBCD-77DD989F9CD1}
