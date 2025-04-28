@@ -15,7 +15,7 @@ namespace Cayd.EntityFrameworkCore.Extensions
         public static void UpdateByPrimaryKey<TEntity>(this DbContext dbContext, object primaryKey, params (Expression<Func<TEntity, object>> property, object? value)[] propertiesAndValues)
             where TEntity : class
         {
-            var entity = dbContext.GetLoadedEntityByPrimaryKey<TEntity>(primaryKey);
+            var entity = dbContext.GetEntityByPrimaryKey<TEntity>(primaryKey);
             dbContext.UpdateEntityProperties(entity, propertiesAndValues);
         }
     }

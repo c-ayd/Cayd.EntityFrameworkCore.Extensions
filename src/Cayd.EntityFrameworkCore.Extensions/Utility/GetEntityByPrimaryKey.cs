@@ -6,7 +6,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Utility
 {
     internal static partial class Utility
     {
-        internal static TEntity GetLoadedEntityByPrimaryKey<TEntity>(this DbContext dbContext, object primaryKey)
+        internal static TEntity GetEntityByPrimaryKey<TEntity>(this DbContext dbContext, object primaryKey)
             where TEntity : class
         {
             var entityType = typeof(TEntity);
