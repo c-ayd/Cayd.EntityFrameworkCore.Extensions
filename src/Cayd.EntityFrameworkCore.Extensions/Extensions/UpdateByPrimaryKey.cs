@@ -1,4 +1,5 @@
-﻿using Cayd.EntityFrameworkCore.Extensions.Utility;
+﻿using Cayd.EntityFrameworkCore.Extensions.Exceptions;
+using Cayd.EntityFrameworkCore.Extensions.Utility;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -15,6 +16,9 @@ namespace Cayd.EntityFrameworkCore.Extensions
         public static void UpdateByPrimaryKey<TEntity>(this DbContext dbContext, object primaryKey, params (Expression<Func<TEntity, object>> property, object? value)[] propertiesAndValues)
             where TEntity : class
         {
+            if (primaryKey == null)
+                throw new NoPrimaryKeyIsPassedException();
+
             var entity = dbContext.GetEntityByPrimaryKey<TEntity>(primaryKey);
             dbContext.UpdateEntityProperties(entity, propertiesAndValues);
         }

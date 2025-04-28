@@ -1,4 +1,5 @@
-﻿using Cayd.EntityFrameworkCore.Extensions.Utility;
+﻿using Cayd.EntityFrameworkCore.Extensions.Exceptions;
+using Cayd.EntityFrameworkCore.Extensions.Utility;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cayd.EntityFrameworkCore.Extensions
@@ -14,6 +15,9 @@ namespace Cayd.EntityFrameworkCore.Extensions
         public static void RemoveByPrimaryKey<TEntity>(this DbContext dbContext, object primaryKey)
             where TEntity : class
         {
+            if (primaryKey == null)
+                throw new NoPrimaryKeyIsPassedException();
+
             var entity = dbContext.GetEntityByPrimaryKey<TEntity>(primaryKey);
             dbContext.Remove(entity);
         }
