@@ -20,7 +20,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntities()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreInChangeTrackerAndEntitiesAreUpdatedViaDbContext_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestParentEntity>();
@@ -66,7 +66,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntities()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreInChangeTrackerAndEntitiesAreUpdatedViaDbSet_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestParentEntity>();
@@ -112,7 +112,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreNotInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntities()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreNotInChangeTrackerAndEntitiesAreUpdatedViaDbContext_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestParentEntity>();
@@ -160,7 +160,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreNotInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntities()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreNotInChangeTrackerAndEntitiesAreUpdatedViaDbSet_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestParentEntity>();
@@ -208,7 +208,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntities()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreInChangeTrackerAndEntitiesAreUpdatedViaDbContext_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestCompositeEntity>();
@@ -248,7 +248,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntities()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreInChangeTrackerAndEntitiesAreUpdatedViaDbSet_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestCompositeEntity>();
@@ -288,7 +288,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreNotInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntities()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreNotInChangeTrackerAndEntitiesAreUpdatedViaDbContext_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestCompositeEntity>();
@@ -330,7 +330,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreNotInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntities()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreNotInChangeTrackerAndEntitiesAreUpdatedViaDbSet_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestCompositeEntity>();
