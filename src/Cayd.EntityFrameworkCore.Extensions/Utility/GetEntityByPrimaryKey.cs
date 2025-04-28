@@ -45,7 +45,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Utility
                     }
                     else
                     {
-                        checks = Expression.And(checks, compare);
+                        checks = Expression.AndAlso(checks, compare);
                     }
                 }
 
