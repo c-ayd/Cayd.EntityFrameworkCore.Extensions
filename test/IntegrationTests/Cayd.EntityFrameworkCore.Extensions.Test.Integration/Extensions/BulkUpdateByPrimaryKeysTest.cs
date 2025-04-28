@@ -3,6 +3,7 @@ using Cayd.EntityFrameworkCore.Extensions.Test.Api.Entities;
 using Cayd.EntityFrameworkCore.Extensions.Test.Api.Entities.ValueObjects;
 using Cayd.EntityFrameworkCore.Extensions.Test.Integration.Collections.DbContexts;
 using Cayd.EntityFrameworkCore.Extensions.Test.Utility.Fixtures;
+using Cayd.EntityFrameworkCore.Extensions.Test.Utility.Helpers;
 using Cayd.Test.Generators;
 using System.Linq.Expressions;
 
@@ -19,7 +20,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntityIsInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntity()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestParentEntity>();
@@ -65,7 +66,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntityIsInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntity()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestParentEntity>();
@@ -111,7 +112,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntityIsNotInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntity()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreNotInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestParentEntity>();
@@ -121,6 +122,8 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             _dbContext.TestParents.Add(entity1);
             _dbContext.TestParents.Add(entity2);
             await _dbContext.SaveChangesAsync();
+            _dbContext.UntrackEntity(entity1);
+            _dbContext.UntrackEntity(entity2);
 
             var newStrValue = "123456789";
             var newIntValue = 0;
@@ -157,7 +160,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntityIsNotInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntity()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsSimpleAndEntitiesAreNotInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestParentEntity>();
@@ -167,6 +170,8 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             _dbContext.TestParents.Add(entity1);
             _dbContext.TestParents.Add(entity2);
             await _dbContext.SaveChangesAsync();
+            _dbContext.UntrackEntity(entity1);
+            _dbContext.UntrackEntity(entity2);
 
             var newStrValue = "123456789";
             var newIntValue = 0;
@@ -203,7 +208,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntityIsInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntity()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestCompositeEntity>();
@@ -243,7 +248,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntityIsInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntity()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestCompositeEntity>();
@@ -283,7 +288,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntityIsNotInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntity()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreNotInChangeTrackerAndEntityIsUpdatedViaDbContext_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestCompositeEntity>();
@@ -297,6 +302,8 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             _dbContext.TestComposites.Add(entity1);
             _dbContext.TestComposites.Add(entity2);
             await _dbContext.SaveChangesAsync();
+            _dbContext.UntrackEntity(entity1);
+            _dbContext.UntrackEntity(entity2);
 
             var newStrValue = "123456789";
             var newIntValue = 0;
@@ -323,7 +330,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
         }
 
         [Fact]
-        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntityIsNotInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntity()
+        public async void BulkUpdateByPrimaryKeys_WhenKeyIsCompositeAndEntitiesAreNotInChangeTrackerAndEntityIsUpdatedViaDbSet_ShouldUpdateEntities()
         {
             // Arrange
             var entity1 = ClassGenerator.Generate<TestCompositeEntity>();
@@ -337,6 +344,8 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             _dbContext.TestComposites.Add(entity1);
             _dbContext.TestComposites.Add(entity2);
             await _dbContext.SaveChangesAsync();
+            _dbContext.UntrackEntity(entity1);
+            _dbContext.UntrackEntity(entity2);
 
             var newStrValue = "123456789";
             var newIntValue = 0;
