@@ -9,7 +9,7 @@
     <Version>1.0.0</Version>
     <Authors>Cemal A. Aydeniz</Authors>
     <Product>Cayd.EntityFrameworkCore.Extensions</Product>
-    <Description>Extension methods for EF Core that provides additional functionalities</Description>
+    <Description>Extension methods for EF Core that provide additional functionalities</Description>
     <PackageProjectUrl>https://github.com/c-ayd/Cayd.EntityFrameworkCore.Extensions</PackageProjectUrl>
     <PackageIcon>nuget-logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
