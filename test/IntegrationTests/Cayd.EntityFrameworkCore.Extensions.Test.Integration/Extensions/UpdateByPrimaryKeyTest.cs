@@ -47,7 +47,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             await _dbContext.SaveChangesAsync();
             var result = await _dbContext.TestParents.FindAsync(entity.Id);
 
-            // Arrange
+            // Assert
             Assert.NotNull(result);
             Assert.Equal(newStrValue, result.StrValue);
             Assert.Equal(newIntValue, result.IntValue);
@@ -83,7 +83,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             await _dbContext.SaveChangesAsync();
             var result = await _dbContext.TestParents.FindAsync(entity.Id);
 
-            // Arrange
+            // Assert
             Assert.NotNull(result);
             Assert.Equal(newStrValue, result.StrValue);
             Assert.Equal(newIntValue, result.IntValue);
@@ -120,7 +120,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             await _dbContext.SaveChangesAsync();
             var result = await _dbContext.TestParents.FindAsync(entity.Id);
 
-            // Arrange
+            // Assert
             Assert.NotNull(result);
             Assert.Equal(newStrValue, result.StrValue);
             Assert.Equal(newIntValue, result.IntValue);
@@ -157,7 +157,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             await _dbContext.SaveChangesAsync();
             var result = await _dbContext.TestParents.FindAsync(entity.Id);
 
-            // Arrange
+            // Assert
             Assert.NotNull(result);
             Assert.Equal(newStrValue, result.StrValue);
             Assert.Equal(newIntValue, result.IntValue);
@@ -187,7 +187,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             await _dbContext.SaveChangesAsync();
             var result = await _dbContext.TestComposites.FindAsync(entity.Id1, entity.Id2);
 
-            // Arrange
+            // Assert
             Assert.NotNull(result);
             Assert.Equal(newStrValue, result.StrValue);
             Assert.Equal(newIntValue, result.IntValue);
@@ -215,7 +215,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             await _dbContext.SaveChangesAsync();
             var result = await _dbContext.TestComposites.FindAsync(entity.Id1, entity.Id2);
 
-            // Arrange
+            // Assert
             Assert.NotNull(result);
             Assert.Equal(newStrValue, result.StrValue);
             Assert.Equal(newIntValue, result.IntValue);
@@ -244,7 +244,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             await _dbContext.SaveChangesAsync();
             var result = await _dbContext.TestComposites.FindAsync(entity.Id1, entity.Id2);
 
-            // Arrange
+            // Assert
             Assert.NotNull(result);
             Assert.Equal(newStrValue, result.StrValue);
             Assert.Equal(newIntValue, result.IntValue);
@@ -273,7 +273,7 @@ namespace Cayd.EntityFrameworkCore.Extensions.Test.Integration.Extensions
             await _dbContext.SaveChangesAsync();
             var result = await _dbContext.TestComposites.FindAsync(entity.Id1, entity.Id2);
 
-            // Arrange
+            // Assert
             Assert.NotNull(result);
             Assert.Equal(newStrValue, result.StrValue);
             Assert.Equal(newIntValue, result.IntValue);
