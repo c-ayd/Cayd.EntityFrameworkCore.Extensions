@@ -12,19 +12,19 @@ namespace Cayd.EntityFrameworkCore.Extensions
         /// Updates a single entity via its primary key without fetching it from the database.
         /// <para>Example usage:</para>
         /// <code>
-        /// UpdateByPrimaryKey(id, [] {
+        /// UpdateByPrimaryKey(id, [
         ///     (x => x.Property1, newValue1),
         ///     (x => x.Property2, newValue2),
         ///     ...
-        /// });
+        /// ]);
         /// </code>
         /// Or if the primary key is a composite key:
         /// <code>
-        /// UpdateByPrimaryKey(new { id1, id2 }, [] {
+        /// UpdateByPrimaryKey(new { id1, id2 }, [
         ///     (x => x.Property1, newValue1),
         ///     (x => x.Property2, newValue2),
         ///     ...
-        /// });
+        /// ]);
         /// </code>
         /// </summary>
         /// <typeparam name="TEntity">Type of the entity to be updated.</typeparam>
@@ -75,19 +75,19 @@ namespace Cayd.EntityFrameworkCore.Extensions
         /// Updates a single entity via its primary key without fetching it from the database.
         /// <para>Example usage:</para>
         /// <code>
-        /// UpdateByPrimaryKey(id, [] {
+        /// UpdateByPrimaryKey(id, [
         ///     (x => x.Property1, newValue1),
         ///     (x => x.Property2, newValue2),
         ///     ...
-        /// });
+        /// ]);
         /// </code>
         /// Or if the primary key is a composite key:
         /// <code>
-        /// UpdateByPrimaryKey(new { id1, id2 }, [] {
+        /// UpdateByPrimaryKey(new { id1, id2 }, [
         ///     (x => x.Property1, newValue1),
         ///     (x => x.Property2, newValue2),
         ///     ...
-        /// });
+        /// ]);
         /// </code>
         /// </summary>
         /// <typeparam name="TEntity">Type of the entity to be updated.</typeparam>

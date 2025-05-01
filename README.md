@@ -13,18 +13,16 @@ public void MyComplexBusinessLogic(int idToUpdate, int idToRemove)
     // ... do other CRUD operations / business logics
 
     /** For .Net 8 and above */
-    dbContext.UpdateByPrimaryKey(idToUpdate, []
-    {
+    dbContext.UpdateByPrimaryKey(idToUpdate, [
         (x => x.Property1, newValue1),
         (x => x.Property2, newValue2),
         ...
-    });
+    ]);
 
     dbContext.RemoveByPrimaryKey<MyEntity>(idToRemove);
 
     /** For versions lower than .Net 8 */
-    dbContext.UpdateByPrimaryKey(idToUpdate, new (Expression<Func<MyEntity, object>> property, object? value)[]
-    {
+    dbContext.UpdateByPrimaryKey(idToUpdate, new (Expression<Func<MyEntity, object>> property, object? value)[] {
         (x => x.Property1, newValue1),
         (x => x.Property2, newValue2),
         ...
@@ -46,18 +44,16 @@ public void MyComplexBusinessLogic(int idToUpdate, int idToRemove)
     // ... do other CRUD operations / business logics
 
     /** For .Net 8 and above */
-    dbContext.MyEntities.UpdateByPrimaryKey(idToUpdate, []
-    {
+    dbContext.MyEntities.UpdateByPrimaryKey(idToUpdate, [
         (x => x.Property1, newValue1),
         (x => x.Property2, newValue2),
         ...
-    });
+    ]);
 
     dbContext.MyEntities.RemoveByPrimaryKey(idToRemove);
 
     /** For versions lower than .Net 8 */
-    dbContext.MyEntities.UpdateByPrimaryKey(idToUpdate, new (Expression<Func<MyEntity, object>> property, object? value)[]
-    {
+    dbContext.MyEntities.UpdateByPrimaryKey(idToUpdate, new (Expression<Func<MyEntity, object>> property, object? value)[] {
         (x => x.Property1, newValue1),
         (x => x.Property2, newValue2),
         ...
@@ -79,21 +75,19 @@ public void MyComplexBusinessLogic(List<int> idsToUpdate, List<int> idsToRemove)
     // ... do other CRUD operations / business logics
 
     /** For .Net 8 and above */
-    dbContext.BulkUpdateByPrimaryKeys(idsToUpdate, []
-    {
+    dbContext.BulkUpdateByPrimaryKeys(idsToUpdate, [
         (x => x.Property1, newValue1, false),
         (x => x.Property2, newValue2, false),
         // The third parameter controls whether the new value needs to be copied or not.
         // This is necessary for value objects. If the property is not a value object, set it to false
         (x => x.MyValueObject, newValueObject, true),
         ...
-    });
+    ]);
 
     dbContext.RemoveRangeByPrimaryKeys<MyEntity>(idsToRemove);
 
     /** For versions lower than .Net 8 */
-    dbContext.UpdateByPrimaryKey(idToUpdate, new (Expression<Func<MyEntity, object>> property, object? value, bool isValueObject)[]
-    {
+    dbContext.UpdateByPrimaryKey(idsToUpdate, new (Expression<Func<MyEntity, object>> property, object? value, bool isValueObject)[] {
         (x => x.Property1, newValue1, false),
         (x => x.Property2, newValue2, false),
         // The third parameter controls whether the new value needs to be copied or not.
@@ -118,21 +112,19 @@ public void MyComplexBusinessLogic(List<int> idsToUpdate, List<int> idsToRemove)
     // ... do other CRUD operations / business logics
 
     /** For .Net 8 and above */
-    dbContext.MyEntities.BulkUpdateByPrimaryKeys(idsToUpdate, []
-    {
+    dbContext.MyEntities.BulkUpdateByPrimaryKeys(idsToUpdate, [
         (x => x.Property1, newValue1, false),
         (x => x.Property2, newValue2, false),
         // The third parameter controls whether the new value needs to be copied or not.
         // This is necessary for value objects. If the property is not a value object, set it to false
         (x => x.MyValueObject, newValueObject, true),
         ...
-    });
+    ]);
 
     dbContext.MyEntities.RemoveRangeByPrimaryKeys(idsToRemove);
 
     /** For versions lower than .Net 8 */
-    dbContext.MyEntities.UpdateByPrimaryKey(idToUpdate, new (Expression<Func<MyEntity, object>> property, object? value, bool isValueObject)[]
-    {
+    dbContext.MyEntities.UpdateByPrimaryKey(idsToUpdate, new (Expression<Func<MyEntity, object>> property, object? value, bool isValueObject)[] {
         (x => x.Property1, newValue1, false),
         (x => x.Property2, newValue2, false),
         // The third parameter controls whether the new value needs to be copied or not.
@@ -150,12 +142,11 @@ public void MyComplexBusinessLogic(List<int> idsToUpdate, List<int> idsToRemove)
 
 - `NOTE`: If your primary key is a composite key, then you have to pass the primary key as an anonymous class. All the extensions methods support composite keys.
 ```csharp
-dbContext.UpdateByPrimaryKey(new { id1, id2 }, []
-{
+dbContext.UpdateByPrimaryKey(new { id1, id2 }, [
     (x => x.Property1, newValue1),
     (x => x.Property2, newValue2),
     ...
-});
+]);
 
 dbContext.RemoveByPrimaryKey<MyEntity>(new { id1, id2 });
 ```

@@ -13,21 +13,21 @@ namespace Cayd.EntityFrameworkCore.Extensions
         /// Updates multiple entities with the same values via their primary keys without fetching them from the database.
         /// <para>Example usage:</para>
         /// <code>
-        /// BulkUpdateByPrimaryKeys(id, [] {
+        /// BulkUpdateByPrimaryKeys(id, [
         ///     (x => x.Property1, newValue1, false),
         ///     (x => x.Property2, newValue2, false),
         ///     (x => x.MyValueObject, newValueObject, true),
         ///     ...
-        /// });
+        /// ]);
         /// </code>
         /// Or if the primary key is a composite key:
         /// <code>
-        /// BulkUpdateByPrimaryKeys(new { id1, id2 }, [] {
+        /// BulkUpdateByPrimaryKeys(new { id1, id2 }, [
         ///     (x => x.Property1, newValue1, false),
         ///     (x => x.Property2, newValue2, false),
         ///     (x => x.MyValueObject, newValueObject, true),
         ///     ...
-        /// });
+        /// ]);
         /// </code>
         /// The third parameter in properties and values controls whether the new value needs to be copied or not. This is necessary for value objects.
         /// If the property is not a value object, set it to FALSE.
@@ -84,21 +84,21 @@ namespace Cayd.EntityFrameworkCore.Extensions
         /// Updates multiple entities with the same values via their primary keys without fetching them from the database.
         /// <para>Example usage:</para>
         /// <code>
-        /// BulkUpdateByPrimaryKeys(id, [] {
+        /// BulkUpdateByPrimaryKeys(id, [
         ///     (x => x.Property1, newValue1, false),
         ///     (x => x.Property2, newValue2, false),
         ///     (x => x.MyValueObject, newValueObject, true),
         ///     ...
-        /// });
+        /// ]);
         /// </code>
         /// Or if the primary key is a composite key:
         /// <code>
-        /// BulkUpdateByPrimaryKeys(new { id1, id2 }, [] {
+        /// BulkUpdateByPrimaryKeys(new { id1, id2 }, [
         ///     (x => x.Property1, newValue1, false),
         ///     (x => x.Property2, newValue2, false),
         ///     (x => x.MyValueObject, newValueObject, true),
         ///     ...
-        /// });
+        /// ]);
         /// </code>
         /// The third parameter in properties and values controls whether the new value needs to be copied or not. This is necessary for value objects.
         /// If the property is not a value object, set it to FALSE.
